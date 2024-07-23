@@ -1,27 +1,49 @@
-# DataBinding
+# Angular Learning Journey
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+Welcome to my Angular Learning Journey repository! This repository is dedicated to documenting my daily tasks and notes as I learn the Google-owned JavaScript framework, Angular.
 
-## Development server
+## Table of Contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Repository Structure](#repository-structure)
+- [Contributing](#contributing)
 
-## Code scaffolding
+## Introduction
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is designed to document my progress in learning Angular. Each day, I will tackle a new topic or task, create a corresponding Angular component, and share my notes on that topic. By following along, you can join me in learning Angular from the basics to more advanced concepts.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To get started, you'll need to clone this repository and install the necessary dependencies.
 
-## Running unit tests
+1. **Clone the repository:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    git clone repo-URL
+    cd project-directory
+    ```
 
-## Running end-to-end tests
+2. **Install the dependencies:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    npm install
+    ```
 
-## Further help
+3. **Run the development server:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    ```bash
+    ng serve
+    ```
+
+    Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Usage
+
+You can use this repository as a guide to learn Angular. Each component corresponds to a specific topic or task. To start learning, simply navigate to the component folder of the topic you're interested in and review the code and notes provided.
+
+## Repository Structure
+
+The repository is organized by topic, with each topic having its components and notes.
+
