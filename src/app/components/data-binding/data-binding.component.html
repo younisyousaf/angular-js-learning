@@ -1,0 +1,121 @@
+<!-- 
+Data Binding 
+1. One Way Data Binding
+    => from .ts to .html (model to view)
+        => Two methods:
+            => Interpolation ( {{ }} )
+            => Property Binding ( [ ] )
+    => from .html to .ts (view to model)
+        => One Method:
+            => Event Binding ( (event ) )
+2. Two Way Data Binding
+    => from .ts to .html (model to view)
+        => Two methods:
+            => Two Way Data Binding ( [(ngModel)] )
+3. Signal Data Binding
+    => from .ts to .html (model to view)
+        => One method:
+            => Signal Data Binding ( [input] )
+            
+-->
+
+<div class="row m-0 p-2 d-flex justify-content-between">
+  <h2>One Way Data Binding</h2>
+  <div class="col-12 p-2 border border-dark">
+    <h3>Interpolation</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="table-dark">
+          <th>Course Name</th>
+          <th>Roll No</th>
+          <th>Current Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ courseName }}</td>
+          <td>{{ rollNo }}</td>
+          <td>{{ currentDate }}</td>
+        </tr>
+        <tr>
+          <td [attr.colspan]="1 + 1">One-Two</td>
+        </tr>
+      </tbody>
+    </table>
+    <div>
+      <input
+        class="form-control"
+        type="text"
+        placeholder=""
+        value="{{ courseName }}"
+      />
+    </div>
+  </div>
+
+  <div class="col-12 p-2 mt-2 border border-info">
+    <h3>Property Binding</h3>
+    <p [class]="myClassName">Count: {{ count }}</p>
+    <button (click)="increment()" [class]="btnClassName">Increment</button>
+    <button
+      style="margin-left: 0.25rem"
+      (click)="reset()"
+      class="btn btn-danger"
+    >
+      Reset
+    </button>
+  </div>
+
+  <div class="col-12 p-2 mt-2 border border-danger">
+    <h3>Event Binding</h3>
+    <button
+      class="btn btn-success"
+      (click)="showAlert('Welcome to Angular 18 Learning Repository!')"
+    >
+      Show Message
+    </button>
+    <button
+      class="btn btn-info"
+      style="margin-left: 0.25rem"
+      (click)="changeCourseName()"
+    >
+      Change Course
+    </button>
+    <button
+      class="btn btn-primary"
+      style="margin-left: 0.25rem"
+      (click)="resetCourseName()"
+    >
+      Reset Course
+    </button>
+  </div>
+  <div class="two-way-data-binding p-2 mt-2 col-12 border border-warning">
+    <h2>Two Way Data Binding</h2>
+    <!-- To use two-way data binding with ngModel, you need to import the FormsModule package into the component's TypeScript file, in the imports array of the @Component decorator. This is necessary because ngModel is a directive included in the FormsModule package. -->
+
+    <!-- Here in [(ngMode)] ==> [] represents the property binding and () represents the event binding -->
+    <!-- ngModel is commonly used with input elements -->
+    <input type="text" [(ngModel)]="courseName" /> - {{ courseName }}
+    <!-- Another Example -->
+    <select
+      class="form-select mt-2"
+      [(ngModel)]="myStateName"
+      aria-label="Default select example"
+    >
+      <option selected>Open this select menu</option>
+      <option value="Punjab">Punjab</option>
+      <option value="Sindh">Sindh</option>
+      <option value="Khyber Pakhtunkhwa">Khyber Pakhtunkhwa</option>
+      <option value="Balochistan">Balochistan</option>
+      <option value="Gilgit-Baltistan">Gilgit-Baltistan</option>
+      <option value="Azad Kashmir">Azad Kashmir</option>
+      <option value="Islamabad Capital Territory">
+        Islamabad Capital Territory
+      </option>
+    </select>
+  </div>
+  <div class="signal-binding p-2 mt-2 col-12 border border-success">
+    <h2>Signal Data Binding</h2>
+    <p class="text-dark">My Name: {{ myName() }}</p>
+    <button class="btn btn-danger" (click)="changeName()">Change Name</button>
+  </div>
+</div>

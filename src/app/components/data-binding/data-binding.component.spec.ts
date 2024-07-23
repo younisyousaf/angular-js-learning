@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataBindingComponent } from './data-binding.component';
+import { DataBindingComponent } from './angular-learning.component';
 
 describe('DataBindingComponent', () => {
   let component: DataBindingComponent;
@@ -8,9 +8,8 @@ describe('DataBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DataBindingComponent]
-    })
-    .compileComponents();
+      imports: [DataBindingComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DataBindingComponent);
     component = fixture.componentInstance;
